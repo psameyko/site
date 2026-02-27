@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import bouquetImage from "../assets/bouquet.svg";
 
 function ComplimentBouquet({ title, subtitle, items }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,7 +35,7 @@ function ComplimentBouquet({ title, subtitle, items }) {
           );
         })}
         <div className="bouquet__center" aria-hidden="true">
-          8
+          <img className="bouquet__center-image" src={bouquetImage} alt="Букет цветов" />
         </div>
       </div>
 

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Букет цветов</title>
+  <desc id="desc">Нежный букет с розовыми и персиковыми цветами</desc>
+  <defs>
+    <radialGradient id="petalPink" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#ffe8ee" />
+      <stop offset="100%" stop-color="#f4bfc8" />
+    </radialGradient>
+    <radialGradient id="petalPeach" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#fff1e6" />
+      <stop offset="100%" stop-color="#f5c9a9" />
+    </radialGradient>
+    <linearGradient id="stem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94b78a" />
+      <stop offset="100%" stop-color="#6f9a66" />
+    </linearGradient>
+    <linearGradient id="wrap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff7ef" />
+      <stop offset="100%" stop-color="#f8ddca" />
+    </linearGradient>
+  </defs>
+
+  <g opacity="0.8">
+    <ellipse cx="64" cy="95" rx="24" ry="22" fill="url(#petalPink)" />
+    <ellipse cx="88" cy="70" rx="24" ry="22" fill="url(#petalPeach)" />
+    <ellipse cx="122" cy="60" rx="26" ry="24" fill="url(#petalPink)" />
+    <ellipse cx="154" cy="72" rx="24" ry="22" fill="url(#petalPeach)" />
+    <ellipse cx="178" cy="96" rx="24" ry="22" fill="url(#petalPink)" />
+    <ellipse cx="120" cy="92" rx="30" ry="28" fill="#ffd7c5" />
+  </g>
+
+  <g>
+    <circle cx="88" cy="74" r="10" fill="#ffd5b7" />
+    <circle cx="122" cy="64" r="11" fill="#ffd2b1" />
+    <circle cx="154" cy="76" r="10" fill="#ffd7bc" />
+  </g>
+
+  <g opacity="0.95">
+    <path d="M95 106 C103 138, 100 162, 92 193" stroke="url(#stem)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M122 100 C128 136, 128 163, 122 196" stroke="url(#stem)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M149 106 C145 138, 147 164, 154 193" stroke="url(#stem)" stroke-width="5" stroke-linecap="round" fill="none" />
+    <path d="M110 130 C94 118, 82 120, 75 134" stroke="#8ab180" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M136 134 C152 120, 164 122, 171 136" stroke="#8ab180" stroke-width="4" stroke-linecap="round" fill="none" />
+  </g>
+
+  <path d="M64 148 L176 148 L152 218 L88 218 Z" fill="url(#wrap)" stroke="#efc7ad" stroke-width="2" />
+  <path d="M110 148 L132 148 L127 218 L115 218 Z" fill="#f2c7af" opacity="0.7" />
+  <path d="M78 184 C105 198, 135 198, 162 184" stroke="#e8a895" stroke-width="5" stroke-linecap="round" fill="none" />
+</svg>
