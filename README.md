@@ -17,6 +17,19 @@ npm run build
 
 Готовые статические файлы будут в папке `dist/`.
 
+## Публикация на GitHub Pages
+
+В проекте уже добавлен workflow:
+`.github/workflows/deploy.yml`
+
+Что сделать один раз в GitHub:
+- открыть репозиторий `site`
+- перейти в `Settings` -> `Pages`
+- в `Build and deployment` выбрать `Source: GitHub Actions`
+
+После этого каждый `push` в ветку `main` будет автоматически публиковать сайт по адресу:
+`https://psameyko.github.io/site/`
+
 ## Что и где редактировать
 
 - Тексты, карточки, комплименты и случайные пожелания:
