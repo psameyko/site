@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function getRandomWish(wishes, previous) {
   if (!wishes.length) {
-    return "";
+    return null;
   }
   if (wishes.length === 1) {
     return wishes[0];
@@ -16,7 +16,7 @@ function getRandomWish(wishes, previous) {
 }
 
 function FinalWish({ title, wish, signature, buttonLabel, randomWishes }) {
-  const [currentWish, setCurrentWish] = useState(randomWishes[0] ?? "");
+  const [currentWish, setCurrentWish] = useState(randomWishes[0] ?? null);
   const [isVisible, setIsVisible] = useState(false);
 
   const handleGenerateWish = () => {
@@ -33,7 +33,12 @@ function FinalWish({ title, wish, signature, buttonLabel, randomWishes }) {
         <button className="button button--secondary" type="button" onClick={handleGenerateWish}>
           {buttonLabel}
         </button>
-        {isVisible && <p className="final-card__random">{currentWish}</p>}
+        {isVisible && currentWish && (
+          <div className="final-card__random">
+            <p className="final-card__random-text">{currentWish.text}</p>
+            <p className="final-card__random-author">- {currentWish.author}</p>
+          </div>
+        )}
       </div>
     </section>
   );

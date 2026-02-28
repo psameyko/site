@@ -365,6 +365,19 @@ p {
   animation: fadeInUp 380ms ease;
 }
 
+.final-card__random-text {
+  margin: 0;
+}
+
+.final-card__random-author {
+  margin-top: 0.5rem;
+  text-align: right;
+  color: #7f5953;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
 @keyframes floatUp {
   0% {
     transform: translateY(0) rotate(0deg);
