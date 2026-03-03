@@ -1,26 +1,27 @@
 import { useState } from "react";
 
-function getRandomWish(wishes, previous) {
-  if (!wishes.length) {
+function getRandomIndex(length) {
+  if (!length) {
     return null;
   }
-  if (wishes.length === 1) {
-    return wishes[0];
-  }
-
-  let nextWish = previous;
-  while (nextWish === previous) {
-    nextWish = wishes[Math.floor(Math.random() * wishes.length)];
-  }
-  return nextWish;
+  return Math.floor(Math.random() * length);
 }
 
 function FinalWish({ title, wish, signature, buttonLabel, randomWishes }) {
-  const [currentWish, setCurrentWish] = useState(randomWishes[0] ?? null);
+  const [currentIndex, setCurrentIndex] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const currentWish = currentIndex === null ? null : randomWishes[currentIndex];
 
   const handleGenerateWish = () => {
-    setCurrentWish((prev) => getRandomWish(randomWishes, prev));
+    setCurrentIndex((prevIndex) => {
+      if (!randomWishes.length) {
+        return null;
+      }
+      if (prevIndex === null) {
+        return getRandomIndex(randomWishes.length);
+      }
+      return (prevIndex + 1) % randomWishes.length;
+    });
     setIsVisible(true);
   };
 
