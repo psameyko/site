@@ -23,12 +23,16 @@ npm run build
 `.github/workflows/deploy.yml`
 
 Что сделать один раз в GitHub:
-- открыть репозиторий `site`
+- открыть репозиторий `congrats`
 - перейти в `Settings` -> `Pages`
 - в `Build and deployment` выбрать `Source: GitHub Actions`
 
 После этого каждый `push` в ветку `main` будет автоматически публиковать сайт по адресу:
-`https://psameyko.github.io/site/`
+`https://psameyko.github.io/congrats/`
+
+Важно:
+- для адреса `/congrats/` репозиторий на GitHub Pages должен называться `congrats`;
+- если репозиторий называется иначе (например, `site`), URL project-site будет использовать имя репозитория.
 
 ## Что и где редактировать
 
